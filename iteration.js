@@ -91,11 +91,43 @@ const firstCapitalizedFruits = fruits.map((fruit) => {
 console.log(firstCapitalizedFruits) */
 
 //take array of numbers and make them prices with currency symbol and two decimal places
-const prices = [5, 4.23, 6.4, 8.09, 3.2]
+//given array - code commented out for next section
+/* const prices = [5, 4.23, 6.4, 8.09, 3.2] //Result: Result: [ '$5.00', '$4.23', '$6.40', '$8.09', '$3.20' ]
 
-const cost = prices.map((price) => {
+const displayPrices = prices.map((price) => {
   //use back ticks to do calculation inside string
   return `$${price.toFixed(2)}`
 })
 
-console.log(cost)
+console.log(displayPrices) */
+
+//---.reduce() method
+//array.reduce(accumulator, currentValue, initialValue)
+
+/*
+---Sum all numbers - numbers = [1, 2, 3, 4]
+
+const total = numbers.reduce((acc, cur) => {
+  return acc + cur
+})
+total = 10
+
+---Create a string from an array - fruits = ['apple', 'pear', 'cherry']
+
+const fruitString = fruits.reduce((acc, fruit) => {
+  return acc + ', ' + fruit
+})
+fruitString = 'apple, pear, 'cherry'
+
+---Always passing a callback function with at least two parameters: accumulator and currentValue
+--Can pass in an initial value
+*/
+
+//given array
+const prices = [6.75, 3.1, 4.0, 8.12] // Total: 21.97
+
+const total = prices.reduce((acc, cur) => {
+  return acc + cur
+})
+
+console.log(total)
