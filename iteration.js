@@ -137,7 +137,7 @@ console.log(total) */
 //given array
 const names = ['Gary', 'Pasan', 'Gabe', 'Treasure', 'Gengis', 'Gladys', 'Tony'] //Result: 4
 
-//view everything from the second open parenthesis until the closing curly brace as the callback function and the 0 afterward as initialValue
+//view everything from the second open parenthesis until the closing curly brace as the callback function (first argument) and the 0 afterward as initialValue (second argument)
 const gNames = names.reduce((acc, cur) => {
   if (cur.charAt(0) === 'G') {
     acc++
@@ -146,3 +146,5 @@ const gNames = names.reduce((acc, cur) => {
 }, 0)
 
 console.log(gNames)
+
+//This seems like a less intuitive method than others for this particular problem.
