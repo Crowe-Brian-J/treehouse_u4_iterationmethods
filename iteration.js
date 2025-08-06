@@ -74,8 +74,8 @@ console.log(number) */
 
 //fruits.toUpperCase() challenge with map method
 
-//given array
-const fruits = ['apple', 'pear', 'cherry']
+//given array - code commented out for next challenge
+/* const fruits = ['apple', 'pear', 'cherry']
 //map over array into new array
 const capitalizedFruits = fruits.map((fruit) => {
   return fruit.toUpperCase()
@@ -88,4 +88,14 @@ const firstCapitalizedFruits = fruits.map((fruit) => {
   return capitalLetter + fruit.substring(1)
 })
 
-console.log(firstCapitalizedFruits)
+console.log(firstCapitalizedFruits) */
+
+//take array of numbers and make them prices with currency symbol and two decimal places
+const prices = [5, 4.23, 6.4, 8.09, 3.2]
+
+const cost = prices.map((price) => {
+  const str = price.toFixed(2).toString()
+  return `$${str}`
+})
+
+console.log(cost)
