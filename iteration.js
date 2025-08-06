@@ -1,3 +1,5 @@
+//---Fruits Section---
+
 //given array - code commented out for next section
 /* const fruits = ['apple', 'pear', 'cherry']
 
@@ -15,8 +17,10 @@ fruits.forEach((fruit) => {
 //log for posterity's sake
 console.log(capitalizedFruits) */
 
-//given prices array
-const prices = [6.75, 3.1, 4.0, 8.12] //total $21.97
+//---Prices Section---
+
+//given prices array - code commented out for next section
+/* const prices = [6.75, 3.1, 4.0, 8.12] //total $21.97
 
 //create totalCost
 let totalCost = 0
@@ -27,4 +31,17 @@ prices.forEach((price) => {
 })
 
 //log for posterity's sake
-console.log(totalCost)
+console.log(totalCost) */
+
+//---Names Section
+
+//given names array
+const names = ['Selma', 'Ted', 'Mike', 'Sam', 'Sharon', 'Marvin'] // Result: ['Selma', 'Sam', 'Sharon'];
+
+//filter for names beginning with 'S'
+const sNames = names.filter((name) => {
+  //only add to list if the character at index 0 of string is 'S'
+  return name.charAt(0) === 'S'
+})
+
+console.log(sNames)
