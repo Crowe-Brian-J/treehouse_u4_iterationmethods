@@ -80,5 +80,12 @@ const fruits = ['apple', 'pear', 'cherry']
 const capitalizedFruits = fruits.map((fruit) => {
   return fruit.toUpperCase()
 })
+//now only capitalize the first letter of the fruit
+const firstCapitalizedFruits = fruits.map((fruit) => {
+  //capture first letter and capitalize
+  let capitalLetter = fruit.charAt(0).toUpperCase()
+  //return string with first index lopped off and replaced by capitalLetter
+  return capitalLetter + fruit.substring(1)
+})
 
-console.log(capitalizedFruits)
+console.log(firstCapitalizedFruits)
