@@ -134,8 +134,8 @@ const total = prices.reduce((acc, cur) => {
 console.log(total) */
 
 //find out how many names in an array start with 'G'
-//given array
-const names = ['Gary', 'Pasan', 'Gabe', 'Treasure', 'Gengis', 'Gladys', 'Tony'] //Result: 4
+//given array - commented out for next section
+/* const names = ['Gary', 'Pasan', 'Gabe', 'Treasure', 'Gengis', 'Gladys', 'Tony'] //Result: 4
 
 //view everything from the second open parenthesis until the closing curly brace as the callback function (first argument) and the 0 afterward as initialValue (second argument)
 const gNames = names.reduce((acc, cur) => {
@@ -145,6 +145,43 @@ const gNames = names.reduce((acc, cur) => {
   return acc
 }, 0)
 
-console.log(gNames)
+console.log(gNames) */
 
 //This seems like a less intuitive method than others for this particular problem.
+
+//---Chaining Array Methods---
+//given array - code commented out for next section
+//const arr = [1, 2, 3]
+
+/*
+const smallerArr = arr.filter((number) => number !== 2)
+const incrementedArr = smallerArr.map((number) => number + 1)
+
+console.log(incrementedArr) => [2,4]
+*/
+
+//instructor notes that you can chain them to make the code shorter and do more at the same time
+
+/* const smallerArr = arr
+  .filter((number) => number !== 2)
+  .map((number) => number + 1) */
+
+//console.log(smallerArr) => [2, 4]
+
+//also called method chaining - chained array methods only work when previous method returns an array
+
+//glad VScode auto-formats the code to multiple lines. Reading everything one after the other would eventually give me a headache
+
+//given array
+const users = [{ name: 'Samir' }, { name: 'Angela' }, { name: 'Beatrice' }]
+
+//use filter to remove 'Samir' from array
+let filteredUsers = users.filter((user) => {
+  if (user.name !== 'Samir') {
+    return user
+  } else {
+    return
+  }
+})
+
+console.log(filteredUsers) // [{name: 'Angela'}, {name: 'Beatrice'}]
