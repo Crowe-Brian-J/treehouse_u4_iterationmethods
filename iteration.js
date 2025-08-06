@@ -1,4 +1,6 @@
-//---Fruits Section---
+//---forEach() Method---
+
+//--Fruits Section--
 
 //given array - code commented out for next section
 /* const fruits = ['apple', 'pear', 'cherry']
@@ -17,7 +19,7 @@ fruits.forEach((fruit) => {
 //log for posterity's sake
 console.log(capitalizedFruits) */
 
-//---Prices Section---
+//--Prices Section--
 
 //given prices array - code commented out for next section
 /* const prices = [6.75, 3.1, 4.0, 8.12] //total $21.97
@@ -33,7 +35,9 @@ prices.forEach((price) => {
 //log for posterity's sake
 console.log(totalCost) */
 
-//---Names Section
+//---filter() Method---
+
+//--Names Section--
 
 //given names array - code commented out for next section
 /* const names = ['Selma', 'Ted', 'Mike', 'Sam', 'Sharon', 'Marvin'] // Result: ['Selma', 'Sam', 'Sharon'];
@@ -47,16 +51,23 @@ const sNames = names.filter((name) => {
 
 console.log(sNames) */
 
-//---Numbers Section---
-//given array
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] //Result: [2, 4, 6, 8, 10]
+//--Numbers Section--
+
+//given array - code commented out for next section
+/* const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] //Result: [2, 4, 6, 8, 10]
 
 //filter out even numbers
 const evens = numbers.filter((number) => {
   //find if the number is evenly divisible by 2
-  if (number % 2 === 0) {
-    return number
-  }
+  return number % 2 === 0
 })
 
-console.log(evens)
+console.log(evens) */
+
+//---map() Method---
+//map iterates over each element of the array and returns a new value on each element, where filter only does so when criteria is met
+//format looks like: arrays.map((array) => {* insert what you want to do here *}) - curly braces optional if single line
+
+/* const strings = ['1', '2', '3', '4', '5']
+const number = strings.map((string) => parseInt(string, 10))
+console.log(number) */
