@@ -35,13 +35,28 @@ console.log(totalCost) */
 
 //---Names Section
 
-//given names array
-const names = ['Selma', 'Ted', 'Mike', 'Sam', 'Sharon', 'Marvin'] // Result: ['Selma', 'Sam', 'Sharon'];
+//given names array - code commented out for next section
+/* const names = ['Selma', 'Ted', 'Mike', 'Sam', 'Sharon', 'Marvin'] // Result: ['Selma', 'Sam', 'Sharon'];
 
 //filter for names beginning with 'S'
+//filtering works similar to forEach where it needs an iterable, 'name' to cycle through each name in the array
 const sNames = names.filter((name) => {
   //only add to list if the character at index 0 of string is 'S'
   return name.charAt(0) === 'S'
 })
 
-console.log(sNames)
+console.log(sNames) */
+
+//---Numbers Section---
+//given array
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] //Result: [2, 4, 6, 8, 10]
+
+//filter out even numbers
+const evens = numbers.filter((number) => {
+  //find if the number is evenly divisible by 2
+  if (number % 2 === 0) {
+    return number
+  }
+})
+
+console.log(evens)
