@@ -95,7 +95,7 @@ const prices = [5, 4.23, 6.4, 8.09, 3.2]
 
 const cost = prices.map((price) => {
   //use back ticks to do calculation inside string
-  return `$${price.toFixed(2).toString()}`
+  return `$${price.toFixed(2)}`
 })
 
 console.log(cost)
