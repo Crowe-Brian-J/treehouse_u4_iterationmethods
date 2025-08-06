@@ -123,11 +123,26 @@ fruitString = 'apple, pear, 'cherry'
 --Can pass in an initial value
 */
 
-//given array
-const prices = [6.75, 3.1, 4.0, 8.12] // Total: 21.97
+//given array - code commented out for next exercise
+/* const prices = [6.75, 3.1, 4.0, 8.12] // Total: 21.97
 
+//cur is iterable following index 0, 1, 2, 3
 const total = prices.reduce((acc, cur) => {
   return acc + cur
 })
 
-console.log(total)
+console.log(total) */
+
+//find out how many names in an array start with 'G'
+//given array
+const names = ['Gary', 'Pasan', 'Gabe', 'Treasure', 'Gengis', 'Gladys', 'Tony'] //Result: 4
+
+//view everything from the second open parenthesis until the closing curly brace as the callback function and the 0 afterward as initialValue
+const gNames = names.reduce((acc, cur) => {
+  if (cur.charAt(0) === 'G') {
+    acc++
+  }
+  return acc
+}, 0)
+
+console.log(gNames)
