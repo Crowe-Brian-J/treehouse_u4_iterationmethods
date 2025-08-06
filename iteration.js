@@ -1,5 +1,5 @@
-//given array
-const fruits = ['apple', 'pear', 'cherry']
+//given array - code commented out for next section
+/* const fruits = ['apple', 'pear', 'cherry']
 
 //create capitalized fruits array
 let capitalizedFruits = []
@@ -13,4 +13,18 @@ fruits.forEach((fruit) => {
 })
 
 //log for posterity's sake
-console.log(capitalizedFruits)
+console.log(capitalizedFruits) */
+
+//given prices array
+const prices = [6.75, 3.1, 4.0, 8.12] //total $21.97
+
+//create totalCost
+let totalCost = 0
+
+//iterate over prices array to add to totalCost
+prices.forEach((price) => {
+  totalCost += price
+})
+
+//log for posterity's sake
+console.log(totalCost)
