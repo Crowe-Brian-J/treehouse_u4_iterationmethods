@@ -264,7 +264,7 @@ const products = [
 //filter array of objects to return the highest priced item under $10
 //Expected Result: { name: 'paper towels', price: 6.99 }
 
-const highLow = products
+/* const highLow = products
   .filter((product) => product.price < 10)
   .reduce((acc, cur) => {
     if (!acc || cur.price > acc.price) {
@@ -275,3 +275,12 @@ const highLow = products
   })
 
 console.log(highLow)
+ */
+
+//using same array of values, return total cost of all products over $10
+const highTotal = products
+  .filter((product) => product.price > 10)
+  .reduce((acc, cur) => acc + cur.price, 0)
+  .toFixed(2)
+
+console.log(highTotal)
