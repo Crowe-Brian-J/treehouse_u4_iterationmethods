@@ -172,12 +172,12 @@ console.log(incrementedArr) => [2,4]
 
 //glad VScode auto-formats the code to multiple lines. Reading everything one after the other would eventually give me a headache
 
-//given array, then add age property
-const users = [
+//given array, then add age property - code commented out for future output
+/* const users = [
   { name: 'Samir', age: 27 },
   { name: 'Angela', age: 33 },
   { name: 'Beatrice', age: 42 }
-]
+] */
 
 //use filter to remove 'Samir' from array - code commented out for further learning
 /* let filteredUsers = users.filter((user) => {
@@ -204,9 +204,25 @@ console.log(userAges) => [  'Samir is 27 years old.', 'Angela is 33 years old.',
 // -- take name and age from each
 //assign it to the accumulator: acc[user.name] = user.age
 //return updated accumulator after each step
-const keyValue = users.reduce((acc, user) => {
+
+/* const keyValue = users.reduce((acc, user) => {
   acc[user.name] = user.age
   return acc
 }, {})
 
-console.log(keyValue) // { Samir: 27, Angela: 33, Beatrice: 42 }
+console.log(keyValue) => { Samir: 27, Angela: 33, Beatrice: 42 } */
+
+//given array
+const userNames = ['Samir', 'Angela', 'Beatrice', 'Shaniqua', 'Marvin', 'Sean']
+
+//combine filter and map
+//Expected Result: [{name: 'Samir'}, {name: 'Shaniqua'}, {name:'Sean'}];
+
+//use filter method to get 'S' names => use map method to set key value pairs
+let filteredUserNames = userNames
+  .filter((user) => {
+    return user.charAt(0) === 'S'
+  })
+  .map((user) => ({ name: user }))
+
+console.log(filteredUserNames)
