@@ -172,16 +172,41 @@ console.log(incrementedArr) => [2,4]
 
 //glad VScode auto-formats the code to multiple lines. Reading everything one after the other would eventually give me a headache
 
-//given array
-const users = [{ name: 'Samir' }, { name: 'Angela' }, { name: 'Beatrice' }]
+//given array, then add age property
+const users = [
+  { name: 'Samir', age: 27 },
+  { name: 'Angela', age: 33 },
+  { name: 'Beatrice', age: 42 }
+]
 
-//use filter to remove 'Samir' from array
-let filteredUsers = users.filter((user) => {
+//use filter to remove 'Samir' from array - code commented out for further learning
+/* let filteredUsers = users.filter((user) => {
   if (user.name !== 'Samir') {
     return user
   } else {
     return
   }
+}) */
+
+//console.log(filteredUsers) => [{name: 'Angela'}, {name: 'Beatrice'}]
+
+//use map to return strings for each user => 'Samir is 27 years old.'
+/* let userAges = users.map((user) => {
+  return `${user.name} is ${user.age} years old.`
 })
 
-console.log(filteredUsers) // [{name: 'Angela'}, {name: 'Beatrice'}]
+console.log(userAges) => [  'Samir is 27 years old.', 'Angela is 33 years old.', 'Beatrice is 42 years old.'] */
+
+//now use reduce method to return object where the user name is the key and their age is the value - { Samir: 27, Angela: 33, Beatrice: 42 }
+
+//start with empty object as the accumulator - initialValue ', {})'
+//loop through each user
+// -- take name and age from each
+//assign it to the accumulator: acc[user.name] = user.age
+//return updated accumulator after each step
+const keyValue = users.reduce((acc, user) => {
+  acc[user.name] = user.age
+  return acc
+}, {})
+
+console.log(keyValue) // { Samir: 27, Angela: 33, Beatrice: 42 }
