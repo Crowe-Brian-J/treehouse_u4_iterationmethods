@@ -212,17 +212,66 @@ console.log(userAges) => [  'Samir is 27 years old.', 'Angela is 33 years old.',
 
 console.log(keyValue) => { Samir: 27, Angela: 33, Beatrice: 42 } */
 
-//given array
-const userNames = ['Samir', 'Angela', 'Beatrice', 'Shaniqua', 'Marvin', 'Sean']
+//given array - code commented out for next section
+//const userNames = ['Samir', 'Angela', 'Beatrice', 'Shaniqua', 'Marvin', 'Sean']
 
 //combine filter and map
 //Expected Result: [{name: 'Samir'}, {name: 'Shaniqua'}, {name:'Sean'}];
 
 //use filter method to get 'S' names => use map method to set key value pairs
-let filteredUserNames = userNames
+/* let filteredUserNames = userNames
   .filter((user) => {
     return user.charAt(0) === 'S'
   })
   .map((user) => ({ name: user }))
 
 console.log(filteredUserNames)
+ */
+
+//given array - commented out code for next section
+/* const users = [
+  { name: 'Samir', age: 27 },
+  { name: 'Angela', age: 33 },
+  { name: 'Beatrice', age: 42 },
+  { name: 'Shaniqua', age: 30 },
+  { name: 'Marvin', age: 23 },
+  { name: 'Sean', age: 47 }
+] */
+
+//use filter and map to create an array of name strings
+//the names should be the users who are 30 years and older
+//Expected Result: ['Angela', 'Beatrice', 'Shaniqua', 'Sean']
+
+/* const atLeastThirty = users
+  .filter((user) => {
+    return user.age >= 30
+  })
+  .map((user) => user.name)
+
+console.log(atLeastThirty)
+ */
+
+//given array
+const products = [
+  { name: 'hard drive', price: 59.99 },
+  { name: 'lighbulbs', price: 2.59 },
+  { name: 'paper towels', price: 6.99 },
+  { name: 'flatscreen monitor', price: 159.99 },
+  { name: 'cable ties', price: 19.99 },
+  { name: 'ballpoint pens', price: 4.49 }
+]
+
+//filter array of objects to return the highest priced item under $10
+//Expected Result: { name: 'paper towels', price: 6.99 }
+
+const highLow = products
+  .filter((product) => product.price < 10)
+  .reduce((acc, cur) => {
+    if (!acc || cur.price > acc.price) {
+      return cur
+    } else {
+      return acc
+    }
+  })
+
+console.log(highLow)
