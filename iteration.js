@@ -251,15 +251,15 @@ console.log(filteredUserNames)
 console.log(atLeastThirty)
  */
 
-//given array
-const products = [
+//given array - commented out for next section
+/* const products = [
   { name: 'hard drive', price: 59.99 },
   { name: 'lighbulbs', price: 2.59 },
   { name: 'paper towels', price: 6.99 },
   { name: 'flatscreen monitor', price: 159.99 },
   { name: 'cable ties', price: 19.99 },
   { name: 'ballpoint pens', price: 4.49 }
-]
+] */
 
 //filter array of objects to return the highest priced item under $10
 //Expected Result: { name: 'paper towels', price: 6.99 }
@@ -277,10 +277,59 @@ const products = [
 console.log(highLow)
  */
 
-//using same array of values, return total cost of all products over $10
-const highTotal = products
+//using same array of values, return total cost of all products over $10 -> Expected Result: 239.97
+/* const highTotal = products
   .filter((product) => product.price > 10)
   .reduce((acc, cur) => acc + cur.price, 0)
   .toFixed(2)
 
-console.log(highTotal)
+console.log(highTotal) */
+
+//given array
+/* const movies = [
+  ['The Day the Earth Stood Still', 'Superman', 'Ghostbusters'],
+  ['Finding Dory'],
+  ['Jaws', 'On the Waterfront']
+]
+ */
+//combine arrays into single array using reduce method
+//Expected Result: ['The Day the Earth Stood Still', 'Superman', 'Ghostbusters', 'Finding Dory', 'Jaws', 'On the Waterfront']
+
+/* const singleMovies = movies.reduce(
+  (acc, innerMovies) => acc.concat(innerMovies),
+  []
+)
+
+console.log(singleMovies) */
+
+//given array
+const users = [
+  {
+    name: 'Samir',
+    age: 27,
+    favoriteBooks: [{ title: 'The Iliad' }, { title: 'The Brothers Karamazov' }]
+  },
+  {
+    name: 'Angela',
+    age: 33,
+    favoriteBooks: [
+      { title: 'Tenth of December' },
+      { title: 'Cloud Atlas' },
+      { title: 'One Hundred Years of Solitude' }
+    ]
+  },
+  {
+    name: 'Beatrice',
+    age: 42,
+    favoriteBooks: [{ title: 'Candide' }]
+  }
+]
+
+//use reduce to make array of strings of favorite books
+//Expected Result: ['The Iliad', 'The Brothers Karamazov', 'Tenth of December', 'Cloud Atlas', 'One Hundred Years of Solitude', 'Candide'];
+
+const favBooks = users.reduce((acc, user) => {
+  user.favoriteBooks.forEach((book) => acc.push(book.title))
+  return acc
+}, [])
+console.log(favBooks)
